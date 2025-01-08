@@ -54,6 +54,6 @@
     "*": [
       "prettier --write"
     ],
-    ".js": "eslint --no-error-on-unmatched-pattern --fix"
+    ".js": "eslint --fix"
   }
 }
