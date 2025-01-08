@@ -1,0 +1,61 @@
+{
+  "plugins": [
+    "prettier-plugin-apex",
+    "@prettier/plugin-xml",
+    "prettier-plugin-sh",
+    "prettier-plugin-pkg"
+  ],
+  "apexInsertFinalNewline": false,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": "*.{cls,trigger}",
+      "options": { "printWidth": 100 }
+    },
+    {
+      "files": "**/lwc/**/*.html",
+      "options": { "parser": "lwc" }
+    },
+    {
+      "files": "*.{cmp,page,component}",
+      "options": { "parser": "html" }
+    },
+    {
+      "files": "**/force-app/**/*.xml",
+      "options": {
+        "tabWidth": 4,
+        "printWidth": 1000000,
+        "trailingComma": "none",
+        "bracketSameLine": true,
+        "xmlSortAttributesByKey": true,
+        "xmlWhitespaceSensitivity": "preserve"
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "proseWrap": "always"
+      }
+    },
+    {
+      "files": ".eslintrc",
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
+      "files": ".husky/**/*",
+      "options": {
+        "parser": "sh"
+      }
+    },
+    {
+      "files": ["LICENSE"],
+      "options": {
+        "parser": "markdown",
+        "proseWrap": "always"
+      }
+    }
+  ]
+}

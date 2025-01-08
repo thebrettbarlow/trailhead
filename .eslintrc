@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "@salesforce/eslint-config-lwc/recommended",
+    "@salesforce/eslint-config-lwc/i18n",
+    "@locker/eslint-config-locker/recommended",
+    "prettier"
+  ],
+  "ignorePatterns": [
+    "node_modules/",
+    "sf_modules/",
+    "*.md",
+    "LICENSE",
+    "package.json",
+    "sfdx-project.json"
+  ]
+}

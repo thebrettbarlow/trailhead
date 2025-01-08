@@ -3,6 +3,7 @@
 #
 
 package.xml
+README
 
 # LWC configuration files
 **/jsconfig.json
@@ -10,3 +11,10 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+
+# Added by Illuminated Cloud
+/.illuminatedCloud/
+**/*.ts
+**/tsconfig*.json
+**/*.tsbuildinfo
+**/eslint.config.mjs

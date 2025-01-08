@@ -1,0 +1,59 @@
+{
+  "name": "trailhead",
+  "version": "1.0.0",
+  "description": "Source code for Brett Barlow's Trailhead challenges.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebrettbarlow/trailhead.git"
+  },
+  "homepage": "https://github.com/thebrettbarlow/trailhead#readme",
+  "bugs": {
+    "url": "https://github.com/thebrettbarlow/trailhead/issues"
+  },
+  "scripts": {
+    "format": "prettier --write . && eslint --no-error-on-unmatched-pattern . --fix",
+    "lint": "prettier --check . && eslint --no-error-on-unmatched-pattern .",
+    "prepare": "husky",
+    "sf:auth": "./scripts/connect_to_org.sh",
+    "sf:create:scratch": "./scripts/make_scratch_org.sh",
+    "sf:deploy": "sf project deploy start --source-dir=force-app --concise --ignore-conflicts",
+    "sf:open": "sf org open --path=lightning",
+    "sf:retrieve:code": "sf project retrieve start --metadata=ApexClass --metadata=ApexPage --metadata=ApexComponent --metadata=ApexTrigger --metadata=AuraDefinitionBundle --metadata=LightningComponentBundle --metadata=StaticResource",
+    "sf:retrieve:noncode": "./scripts/retrieve_non_code_metadata.sh",
+    "sf:validate": "sf project deploy start --source-dir=force-app --concise --ignore-conflicts --dry-run --test-level=RunLocalTests",
+    "test": "sf apex test run --test-level=RunLocalTests --wait=10"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@locker/eslint-config-locker": "^0.21.6",
+    "@lwc/eslint-plugin-lwc": "^1.8.1",
+    "@oclif/core": "^3.26.4",
+    "@prettier/plugin-xml": "^3.2.2",
+    "@salesforce/dev-config": "^4.1.0",
+    "@salesforce/eslint-config-lwc": "^3.5.3",
+    "@salesforce/eslint-plugin-lightning": "^1.0.0",
+    "@salesforce/sfdx-lwc-jest": "^3.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^28.5.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.1.1",
+    "prettier-plugin-apex": "^2.0.1",
+    "prettier-plugin-pkg": "^0.18.0",
+    "prettier-plugin-sh": "^0.13.1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write"
+    ],
+    ".js": "eslint --no-error-on-unmatched-pattern --fix"
+  }
+}
