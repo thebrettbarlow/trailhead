@@ -18,6 +18,8 @@
     "sf:create:scratch": "./scripts/make_scratch_org.sh",
     "sf:deploy": "sf project deploy start --source-dir=force-app --concise --ignore-conflicts",
     "sf:open": "sf org open --path=lightning",
+    "sf:password:create": "sf org generate password",
+    "sf:password:get": "sf org display user",
     "sf:retrieve:code": "sf project retrieve start --metadata=ApexClass --metadata=ApexPage --metadata=ApexComponent --metadata=ApexTrigger --metadata=AuraDefinitionBundle --metadata=LightningComponentBundle --metadata=StaticResource",
     "sf:retrieve:noncode": "./scripts/retrieve_non_code_metadata.sh",
     "sf:validate": "sf project deploy start --source-dir=force-app --concise --ignore-conflicts --dry-run --test-level=RunLocalTests",
