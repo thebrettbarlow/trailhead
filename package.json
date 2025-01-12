@@ -21,7 +21,7 @@
     "sf:password:create": "sf org generate password",
     "sf:password:get": "sf org display user",
     "sf:retrieve:code": "sf project retrieve start --metadata=ApexClass --metadata=ApexPage --metadata=ApexComponent --metadata=ApexTrigger --metadata=AuraDefinitionBundle --metadata=LightningComponentBundle --metadata=StaticResource",
-    "sf:retrieve:noncode": "./scripts/retrieve_non_code_metadata.sh",
+    "sf:retrieve:dev:beginner": "sf project retrieve start --manifest=force-app/dev/beginner/package.xml",
     "sf:validate": "sf project deploy start --source-dir=force-app --concise --ignore-conflicts --dry-run --test-level=RunLocalTests",
     "test": "sf apex test run --test-level=RunLocalTests --wait=10"
   },
