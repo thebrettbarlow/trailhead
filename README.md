@@ -21,12 +21,11 @@ module that we work on. Use this command to create the folder with an empty
 
 ```shell
 project_dir="" # For example: dev/beginner
-target_org="trailhead"
 
 mkdir -p force-app/${project_dir}
 sf project generate manifest \
-  --output-dir="force-app/${project_dir}" \
   --source-dir="force-app/${project_dir}" \
+  --output-dir="force-app/${project_dir}" \
   --type=package
 ```
 
@@ -54,10 +53,10 @@ metadata in the folder with this command:
 
 ```shell
 project_dir="" # For example: dev/beginner
-target_org="trailhead"
 
 sf project generate manifest \
-  --output-dir="force-app/${project_dir}" \
+  --target-org="${target_org}" \
   --source-dir="force-app/${project_dir}" \
+  --output-dir="force-app/${project_dir}" \
   --type=package
 ```
