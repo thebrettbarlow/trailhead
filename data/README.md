@@ -15,7 +15,7 @@ challenges.
 Run this command to create the directory and an empty `query.soql` file:
 
 ```shell
-project_dir="dev/beginner" # For example: dev/beginner
+project_dir="" # For example: dev/beginner
 
 mkdir -p "data/${project_dir}"
 touch "data/${project_dir}/query.soql"
