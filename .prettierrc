@@ -3,7 +3,8 @@
     "prettier-plugin-apex",
     "@prettier/plugin-xml",
     "prettier-plugin-sh",
-    "prettier-plugin-pkg"
+    "prettier-plugin-pkg",
+    "prettier-plugin-sql"
   ],
   "apexInsertFinalNewline": false,
   "singleQuote": true,
@@ -30,6 +31,12 @@
         "bracketSameLine": true,
         "xmlSortAttributesByKey": true,
         "xmlWhitespaceSensitivity": "preserve"
+      }
+    },
+    {
+      "files": "*.soql",
+      "options": {
+        "parser": "sql"
       }
     },
     {

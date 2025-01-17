@@ -47,7 +47,8 @@
     "prettier": "^3.1.1",
     "prettier-plugin-apex": "^2.0.1",
     "prettier-plugin-pkg": "^0.18.0",
-    "prettier-plugin-sh": "^0.13.1"
+    "prettier-plugin-sh": "^0.13.1",
+    "prettier-plugin-sql": "^0.18.1"
   },
   "commitlint": {
     "extends": [
