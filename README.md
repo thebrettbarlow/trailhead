@@ -30,9 +30,9 @@ sf project generate manifest \
 ```
 
 As you work through the challenge, add entries to the `package.xml` file so the
-source can be retrieved later. Alternatively, you can `sf project retrieve` and
-run the command [below](#updating-packagexml-files) to update the `package.xml`
-file.
+source can be retrieved later. Alternatively, you can
+`sf project retrieve start --metadata=foo` and run the command
+[below](#updating-packagexml-files) to update the `package.xml` file.
 
 ### Retrieving Metadata
 
