@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Average_Annual_Electric_Cost__c</fullName>
+    <inlineHelpText>Annual cost per square foot.</inlineHelpText>
+    <label>Average Annual Electric Cost</label>
+    <precision>18</precision>
+    <required>true</required>
+    <scale>2</scale>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

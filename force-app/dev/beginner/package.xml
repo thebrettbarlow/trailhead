@@ -9,14 +9,22 @@
         <name>CompactLayout</name>
     </types>
     <types>
+        <members>EnergyConsultationsIcon</members>
         <members>dreamhouselogo</members>
         <name>ContentAsset</name>
     </types>
     <types>
         <members>Dreamhouse</members>
+        <members>Energy_Consultations</members>
         <name>CustomApplication</name>
     </types>
     <types>
+        <members>Account.Type</members>
+        <members>Energy_Audit__c.Account__c</members>
+        <members>Energy_Audit__c.Annual_Energy_Usage_kWh__c</members>
+        <members>Energy_Audit__c.Audit_Notes__c</members>
+        <members>Energy_Audit__c.Average_Annual_Electric_Cost__c</members>
+        <members>Energy_Audit__c.Type_of_Installation__c</members>
         <members>House__c.Address__c</members>
         <members>House__c.Bathrooms__c</members>
         <members>House__c.Bedroom__c</members>
@@ -28,18 +36,23 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>Account</members>
+        <members>Energy_Audit__c</members>
         <members>House__c</members>
+        <members>Opportunity</members>
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Energy_Audit__c</members>
         <members>House__c</members>
         <name>CustomTab</name>
     </types>
     <types>
         <members>Home_Page_Default</members>
-        <name>Flexipage</name>
+        <name>FlexiPage</name>
     </types>
     <types>
+        <members>Energy_Audit__c-Energy Audit Layout</members>
         <members>House__c-House Layout</members>
         <name>Layout</name>
     </types>
@@ -48,8 +61,17 @@
         <name>LightningComponentBundle</name>
     </types>
     <types>
+        <members>Account.Channel_Customers</members>
+        <members>Energy_Audit__c.All</members>
         <members>House__c.All</members>
+        <members>Opportunity.AllOpportunities</members>
+        <members>Opportunity.High_Probability_Opportunities</members>
         <name>ListView</name>
+    </types>
+    <types>
+        <members>AccountType</members>
+        <members>OpportunityStage</members>
+        <name>StandardValueSet</name>
     </types>
     <version>62.0</version>
 </Package>
