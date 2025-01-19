@@ -21,11 +21,12 @@ module that we work on. Use this command to create the folder with an empty
 
 ```shell
 project_dir="" # For example: dev/beginner
+root_dir=$(git rev-parse --show-toplevel)
 
-mkdir -p force-app/${project_dir}
+mkdir -p "${root_dir}/force-app/${project_dir}"
 sf project generate manifest \
-  --source-dir="force-app/${project_dir}" \
-  --output-dir="force-app/${project_dir}" \
+  --source-dir="${root_dir}/force-app/${project_dir}" \
+  --output-dir="${root_dir}/force-app/${project_dir}" \
   --type=package
 ```
 
@@ -41,9 +42,10 @@ Use this command to retrieve metadata defined in the `package.xml` file:
 ```shell
 project_dir="" # For example: dev/beginner
 target_org="trailhead"
+root_dir=$(git rev-parse --show-toplevel)
 
 sf project retrieve start \
-  --manifest="force-app/${project_dir}/package.xml"
+  --manifest="${root_dir}/force-app/${project_dir}/package.xml"
 ```
 
 ### Updating `package.xml` Files
@@ -53,10 +55,10 @@ metadata in the folder with this command:
 
 ```shell
 project_dir="" # For example: dev/beginner
+root_dir=$(git rev-parse --show-toplevel)
 
 sf project generate manifest \
-  --target-org="${target_org}" \
-  --source-dir="force-app/${project_dir}" \
-  --output-dir="force-app/${project_dir}" \
+  --source-dir="${root_dir}/force-app/${project_dir}" \
+  --output-dir="${root_dir}/force-app/${project_dir}" \
   --type=package
 ```

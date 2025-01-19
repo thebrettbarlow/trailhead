@@ -7,7 +7,7 @@ challenges.
 
 ## Getting Started
 
-1. Create a directory in [/data](/data) in a way that mirrors the structure in
+1. Create a directory in [data](/data) in a way that mirrors the structure in
    [force-app](/force-app).
 2. Create a `query.soql` file that contains the SOQL query to export the data.
 3. Follow the steps in [Exporting Data](#exporting-data) to export the data.
@@ -16,9 +16,10 @@ Run this command to create the directory and an empty `query.soql` file:
 
 ```shell
 project_dir="" # For example: dev/beginner
+root_dir=$(git rev-parse --show-toplevel)
 
-mkdir -p "data/${project_dir}"
-touch "data/${project_dir}/query.soql"
+mkdir -p "${root_dir}/data/${project_dir}"
+touch "${root_dir}/data/${project_dir}/query.soql"
 ```
 
 When data needs to be imported, follow the steps in
@@ -36,12 +37,13 @@ For example:
 ```shell
 project_dir="" # For example: dev/beginner
 target_org="trailhead"
+root_dir=$(git rev-parse --show-toplevel)
 
 sf data export tree \
   --target-org="${target_org}" \
   --plan \
-  --query="data/${project_dir}/query.soql" \
-  --output-dir="data/${project_dir}"
+  --query="${root_dir}/data/${project_dir}/query.soql" \
+  --output-dir="${root_dir}/data/${project_dir}"
 ```
 
 ## Importing Data
@@ -53,8 +55,9 @@ For example:
 ```shell
 project_dir="" # For example: dev/beginner
 target_org="trailhead"
+root_dir=$(git rev-parse --show-toplevel)
 
-plan_file=$(find "data/${project_dir}" -name "*-plan.json" -print -quit)
+plan_file=$(find "${root_dir}/data/${project_dir}" -name "*-plan.json" -print -quit)
 
 sf data import tree \
   --target-org="${target_org}" \
