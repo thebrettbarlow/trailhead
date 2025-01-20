@@ -3,23 +3,15 @@
 set -e
 
 ##
-# Creates a scratch org and deploys metadata to it
+# Creates a scratch org
 #
-# This is useful when you'd like to restart where you left off based on metadata
-# saved in the repository. It will not create a Trailhead Playground. Instead,
-# it will create a scratch org and you will need to connect the org to Trailhead
-# to complete the challenges.
+# This is useful if you'd like to experiment with metadata from a Trailhead
+# module in a scratch org.
 #
-# Follow these steps to connect the org to Trailhead:
-#
-# 1. Run this script to create the scratch org
-# 2. Deploy metadata to the scratch org
-# 3. Optionally deploy data to the scratch org (not required for all challenges)
-# 4. Use `npm run sf:password:get` to get the password for the scratch org
-# 4. Open the Trailhead UI
-# 5. Click on the org picker in the "Hands-on Challenge" section
-# 6. Click on "Connect Org"
-# 7. Login with the username and password from step 4
+# The Trailhead UI does not currently support connecting to scratch orgs (as of
+# January 2025). This is because the "Connect Org" button opens
+# `login.salesforce.com` and we need to use either `test.salesforce.com` or the
+# scratch org's instance url (My Domain) to login.
 ##
 
 target_org="trailhead--scratch"
