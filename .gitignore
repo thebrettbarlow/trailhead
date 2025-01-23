@@ -52,7 +52,3 @@ target/
 /.illuminatedCloud/
 **/tsconfig*.json
 **/*.tsbuildinfo
-
-# IntelliJ files
-.idea
-*.iml
