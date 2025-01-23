@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-env node */
 
 const Ajv = require('ajv');
 const fs = require('fs');
