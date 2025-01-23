@@ -4,3 +4,5 @@ sf_modules/
 **/contentassets/**
 
 .gitignore
+
+.idea/workspace.xml
