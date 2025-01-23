@@ -2,3 +2,5 @@ node_modules/
 sf_modules/
 .forceignore
 **/contentassets/**
+
+.gitignore
