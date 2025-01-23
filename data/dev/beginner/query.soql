@@ -1,5 +1,16 @@
 SELECT
   Id,
-  Name
+  Name,
+  (
+    SELECT
+      Id,
+      Name,
+      Account__c,
+      Annual_Energy_Usage_kWh__c,
+      Average_Annual_Electric_Cost__c,
+      Type_of_Installation__c
+    FROM
+      Energy_Audits__r
+  )
 FROM
   Account
