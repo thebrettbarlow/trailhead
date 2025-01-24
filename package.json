@@ -15,7 +15,7 @@
     "lint": "prettier --check . && eslint --no-error-on-unmatched-pattern .",
     "prepare": "husky",
     "sf:auth": "./scripts/connect-to-org.sh trailhead",
-    "sf:create:scratch": "./scripts/make-scratch-org.sh trailhead--scratch",
+    "sf:create:scratch": "./scripts/create-scratch-org.sh trailhead--scratch",
     "sf:deploy": "sf project deploy start --source-dir=force-app --concise --ignore-conflicts",
     "sf:install:3p:packages": "./scripts/install-packages.sh trailhead 3p",
     "sf:open": "sf org open --path=lightning",

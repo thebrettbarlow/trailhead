@@ -12,7 +12,7 @@
 # scratch org's instance url (My Domain) to login.
 #
 # Usage:
-#   make-scratch-org.sh <org-alias>
+#   create-scratch-org.sh <org-alias>
 ##
 
 set -e
