@@ -3,24 +3,17 @@
   <component name="JsonSchemaMappingsProjectConfiguration">
     <state>
       <map>
-        <entry key="Installed Packages Schema">
+        <entry key="Installed Salesforce Packages Schema">
           <value>
             <SchemaInfo>
-              <option name="name" value="Installed Packages Schema" />
+              <option
+                name="name"
+                value="Installed Salesforce Packages Schema"
+              />
               <option
                 name="relativePathToSchema"
-                value=".schemas/installed_packages.schema.json"
+                value=".schemas/installed-packages.schema.json"
               />
-              <option name="patterns">
-                <list>
-                  <Item>
-                    <option
-                      name="path"
-                      value="force-app/dev/beginner/installed_packages.json"
-                    />
-                  </Item>
-                </list>
-              </option>
             </SchemaInfo>
           </value>
         </entry>

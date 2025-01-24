@@ -17,7 +17,11 @@
     "sf:auth": "./scripts/connect_to_org.sh",
     "sf:create:scratch": "./scripts/make_scratch_org.sh",
     "sf:deploy": "sf project deploy start --source-dir=force-app --concise --ignore-conflicts",
+    "sf:install:3p:packages": "./scripts/install-packages.sh target-org 3p",
+    "sf:module:temp:test:list": "./scripts/apex-test-operator.sh target-org target-org list",
+    "sf:module:temp:test:run": "./scripts/apex-test-operator.sh target-org target-org run",
     "sf:open": "sf org open --path=lightning",
+    "sf:open:setup": "sf org open --path=lightning/setup/SetupOneHome/home",
     "sf:password:create": "sf org generate password",
     "sf:password:get": "sf org display user",
     "sf:trail:dev:beginner:data:export": "./scripts/export_data.sh dev/beginner",
@@ -26,6 +30,7 @@
     "sf:trail:dev:beginner:install:packages": "./scripts/install_packages.sh dev/beginner",
     "sf:trail:dev:beginner:manifest": "./scripts/update_manifest.sh dev/beginner",
     "sf:trail:dev:beginner:retrieve": "./scripts/retrieve_manifest.sh dev/beginner",
+    "sf:validate": "sf project deploy start --source-dir=force-app --concise --ignore-conflicts --dry-run",
     "test": "sf apex test run --test-level=RunLocalTests --wait=10"
   },
   "devDependencies": {
@@ -35,6 +40,7 @@
     "@lwc/eslint-plugin-lwc": "^2.0.0",
     "@oclif/core": "^3.26.4",
     "@prettier/plugin-xml": "^3.2.2",
+    "@salesforce/core": "^8.8.2",
     "@salesforce/dev-config": "^4.1.0",
     "@salesforce/eslint-config-lwc": "^3.7.0",
     "@salesforce/eslint-plugin-lightning": "^1.0.0",
@@ -50,7 +56,8 @@
     "prettier-plugin-apex": "^2.0.1",
     "prettier-plugin-pkg": "^0.18.0",
     "prettier-plugin-sh": "^0.13.1",
-    "prettier-plugin-sql": "^0.18.1"
+    "prettier-plugin-sql": "^0.18.1",
+    "xml2js": "^0.6.2"
   },
   "commitlint": {
     "extends": [
