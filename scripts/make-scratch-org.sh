@@ -1,11 +1,19 @@
 #!/usr/bin/env bash
 
 ##
-# Creates a scratch org in one step.
+# Creates a scratch org
+#
+# This is useful if you'd like to experiment with metadata from a Trailhead
+# module in a scratch org.
+#
+# The Trailhead UI does not currently support connecting to scratch orgs (as of
+# January 2025). This is because the "Connect Org" button opens
+# `login.salesforce.com` and we need to use either `test.salesforce.com` or the
+# scratch org's instance url (My Domain) to login.
 #
 # Usage:
 #   make-scratch-org.sh <org-alias>
-#
+##
 
 set -e
 
@@ -80,8 +88,6 @@ open_scratch_org() {
     --path=lightning
 }
 
-# TODO: remove what is not needed
-
 # Main script execution
 validate_params "$1"
 
@@ -100,23 +106,6 @@ check_executable "$install_packages_script"
 
 echo "Creating scratch org..."
 create_scratch_org "$org_alias"
-install_packages "$org_alias"
-
-# Placeholder values for community parameters
-community_name="CommunityName"
-url_path_prefix="communityname"
-template_name="Build Your Own (LWR)"
-authentication_type="AUTHENTICATED_WITH_PUBLIC_ACCESS_ENABLED"
-create_community "$org_alias" "$community_name" "$url_path_prefix" "$template_name" "$authentication_type"
-
-# TODO: replace with real modules
-deploy_manifest "$org_alias" "example1"
-deploy_manifest "$org_alias" "example2"
-
-import_sample_data "$org_alias" "example1"
-import_sample_data "$org_alias" "example2"
-
-run_tests "$org_alias"
 open_scratch_org "$org_alias"
 
 echo "Done"

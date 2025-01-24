@@ -41,8 +41,7 @@ run_tests() {
 
   check_executable "${apex_test_operator_script}"
 
-  # TODO: add modules to run apex tests for
-  # "${apex_test_operator_script}" "${target_org}" "example-module" "run"
+  "${apex_test_operator_script}" "${target_org}" "dev/beginner" "run"
 }
 
 # Main script execution
