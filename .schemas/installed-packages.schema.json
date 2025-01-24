@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Installed Salesforce Packages Configuration",
+  "description": "Configuration for Salesforce packages to be installed",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Name": {
+        "type": "string",
+        "description": "Descriptive name of the package"
+      },
+      "PackageVersionId": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9]{15}([a-zA-Z0-9]{3})?$",
+        "description": "Salesforce Package Version ID (15 or 18 characters)"
+      },
+      "SecurityType": {
+        "type": "string",
+        "enum": ["AllUsers", "AdminsOnly"],
+        "description": "Package installation security scope"
+      }
+    },
+    "required": ["Name", "PackageVersionId", "SecurityType"],
+    "additionalProperties": false
+  }
+}

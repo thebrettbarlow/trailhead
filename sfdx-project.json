@@ -3,9 +3,11 @@
     {
       "path": "force-app",
       "default": true
-    }
+    },
+    { "path": "3p" },
+    { "path": "unpackaged" }
   ],
-  "name": "trailhead",
+  "name": "salesforce",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "62.0"

@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module
-        fileurl="file://$PROJECT_DIR$/.idea/trailhead.iml"
-        filepath="$PROJECT_DIR$/.idea/trailhead.iml"
+        fileurl="file://$PROJECT_DIR$/.idea/salesforce.iml"
+        filepath="$PROJECT_DIR$/.idea/salesforce.iml"
       />
     </modules>
   </component>

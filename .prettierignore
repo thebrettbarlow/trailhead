@@ -1,8 +1,5 @@
 node_modules/
-sf_modules/
 .forceignore
 **/contentassets/**
-
-.gitignore
-
-.idea/workspace.xml
+.husky/_/**
+.idea/

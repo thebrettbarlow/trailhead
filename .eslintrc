@@ -8,7 +8,6 @@
   ],
   "ignorePatterns": [
     "node_modules/",
-    "sf_modules/",
     "*.md",
     "LICENSE",
     "package.json",
