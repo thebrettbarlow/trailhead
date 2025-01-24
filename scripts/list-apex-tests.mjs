@@ -45,7 +45,8 @@ const getApexClassNames = (packageJson) => {
 };
 
 const getSalesforceConnection = async (orgAlias) => {
-  return Org.create({ aliasOrUsername: orgAlias }).getConnection();
+  const org = await Org.create({ aliasOrUsername: orgAlias });
+  return org.getConnection();
 };
 
 const getApexClasses = async (conn, apexClassNames) => {
