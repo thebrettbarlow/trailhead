@@ -5,7 +5,9 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>Energy_Audit__c.Energy_Audit_Compact_Layout</members>
         <members>House__c.Custom_Compact_Layout</members>
+        <members>Opportunity.New_Oppty_Compact_Layout</members>
         <name>CompactLayout</name>
     </types>
     <types>
@@ -19,6 +21,9 @@
         <name>CustomApplication</name>
     </types>
     <types>
+        <members>Account.BillingAddress</members>
+        <members>Account.CustomerPriority__c</members>
+        <members>Account.Industry</members>
         <members>Account.Type</members>
         <members>Energy_Audit__c.Account__c</members>
         <members>Energy_Audit__c.Annual_Energy_Usage_kWh__c</members>
@@ -33,13 +38,19 @@
         <members>House__c.Price__c</members>
         <members>House__c.State__c</members>
         <members>House__c.Zip__c</members>
+        <members>Opportunity.AccountId</members>
+        <members>Opportunity.Amount</members>
+        <members>Opportunity.CloseDate</members>
+        <members>Opportunity.Name</members>
+        <members>Opportunity.OwnerId</members>
+        <members>Opportunity.Probability</members>
+        <members>Opportunity.StageName</members>
         <name>CustomField</name>
     </types>
     <types>
         <members>Account</members>
         <members>Energy_Audit__c</members>
         <members>House__c</members>
-        <members>Opportunity</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -48,6 +59,7 @@
         <name>CustomTab</name>
     </types>
     <types>
+        <members>Energy_Consultations_UtilityBar</members>
         <members>Home_Page_Default</members>
         <name>FlexiPage</name>
     </types>
