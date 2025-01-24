@@ -40,7 +40,7 @@ is_package_installed() {
 install_packages() {
   local json_file="$1"
   local packages
-  packages=$(jq -r '.packages[]' "${json_file}")
+  packages=$(jq -r '.[].PackageVersionId' "${json_file}")
 
   for package in ${packages}; do
     if ! is_package_installed "${package}"; then
