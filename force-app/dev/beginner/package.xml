@@ -81,6 +81,10 @@
         <name>ListView</name>
     </types>
     <types>
+        <members>Energy_Consultations_User</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
         <members>AccountType</members>
         <members>OpportunityStage</members>
         <name>StandardValueSet</name>
