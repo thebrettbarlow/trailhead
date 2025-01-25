@@ -9,6 +9,8 @@ export default class HousingMap extends LightningElement {
   mapMarkers;
   error;
 
+  // TODO: resume at "Add the Component to the App Home"
+
   @wire(getHouses)
   wiredHouses({ error, data }) {
     if (data) {
