@@ -15,6 +15,38 @@
     <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Energy Consultations</label>
     <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Energy_Audit_Record_Page_for_Sales</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Energy_Audit__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Energy_Audit_Record_Page_for_Sales</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Energy_Audit__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Energy_Audit_Record_Page_for_Sales</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Energy_Audit__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Custom: Sales Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Energy_Audit_Record_Page_for_Sales</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Energy_Audit__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Custom: Sales Profile</profile>
+    </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>standard-Feed</tabs>
     <tabs>standard-CollaborationGroup</tabs>

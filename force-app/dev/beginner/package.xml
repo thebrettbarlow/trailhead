@@ -49,6 +49,7 @@
     </types>
     <types>
         <members>Account</members>
+        <members>Contact</members>
         <members>Energy_Audit__c</members>
         <members>House__c</members>
         <name>CustomObject</name>
@@ -59,6 +60,8 @@
         <name>CustomTab</name>
     </types>
     <types>
+        <members>Contact_Record_Page</members>
+        <members>Energy_Audit_Record_Page_for_Sales</members>
         <members>Energy_Consultations_UtilityBar</members>
         <members>Home_Page_Default</members>
         <name>FlexiPage</name>
