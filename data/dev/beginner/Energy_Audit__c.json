@@ -1,0 +1,37 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "Energy_Audit__c",
+        "referenceId": "Energy_Audit__cRef1"
+      },
+      "Name": "UA Spring assessment",
+      "Account__c": "@AccountRef8",
+      "Annual_Energy_Usage_kWh__c": 30,
+      "Average_Annual_Electric_Cost__c": 2.19,
+      "Type_of_Installation__c": "Carport"
+    },
+    {
+      "attributes": {
+        "type": "Energy_Audit__c",
+        "referenceId": "Energy_Audit__cRef2"
+      },
+      "Name": "GenePoint 5-year review",
+      "Account__c": "@AccountRef11",
+      "Annual_Energy_Usage_kWh__c": 21,
+      "Average_Annual_Electric_Cost__c": 1.56,
+      "Type_of_Installation__c": "Rooftop"
+    },
+    {
+      "attributes": {
+        "type": "Energy_Audit__c",
+        "referenceId": "Energy_Audit__cRef3"
+      },
+      "Name": "sForce Los Altos Hills campus",
+      "Account__c": "@AccountRef12",
+      "Annual_Energy_Usage_kWh__c": 25,
+      "Average_Annual_Electric_Cost__c": 1.77,
+      "Type_of_Installation__c": "Ground mounted"
+    }
+  ]
+}
