@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 ##
-# Retrieves metadata via a manifest for a module.
+# Exports the data for a module.
 #
 # Usage:
-#   retrieve-manifest.sh <target-org> <module-dir>
+#   export-data.sh <target-org> <module-dir>
 #
 
 set -e
@@ -21,34 +21,35 @@ validate_params() {
   fi
 }
 
-check_manifest_file() {
+check_soql_file() {
   local root_dir="$1"
   local module_dir="$2"
-  local manifest_file="${root_dir}/force-app/${module_dir}/package.xml"
+  local soql_file="${root_dir}/data/${module_dir}/query.soql"
 
-  if [[ ! -f "$manifest_file" ]]; then
-    echo "Error: Manifest file not found at $manifest_file."
+  if [[ ! -f "$soql_file" ]]; then
+    echo "Error: SOQL file not found at $soql_file."
     exit 1
   fi
 }
 
-retrieve_metadata() {
+export_data() {
   local target_org="$1"
   local module_dir="$2"
   local root_dir
 
   root_dir=$(git rev-parse --show-toplevel)
 
-  check_manifest_file "$root_dir" "$module_dir"
+  check_soql_file "$root_dir" "$module_dir"
 
-  sf project retrieve start \
-    --ignore-conflicts \
-    --target-org="$target_org" \
-    --manifest="${root_dir}/force-app/${module_dir}/package.xml"
+  sf data export tree \
+    --target-org="${target_org}" \
+    --plan \
+    --query="${root_dir}/data/${module_dir}/query.soql" \
+    --output-dir="${root_dir}/data/${module_dir}"
 
   npm run format
 }
 
 # Main script execution
 validate_params "$1" "$2"
-retrieve_metadata "$1" "$2"
+export_data "$1" "$2"
