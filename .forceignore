@@ -2,9 +2,6 @@
 # More information: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm
 #
 
-package.xml
-README
-
 # LWC configuration files
 **/jsconfig.json
 **/.eslintrc.json
@@ -19,7 +16,11 @@ README
 **/*.tsbuildinfo
 **/eslint.config.mjs
 
+##
 # Ignoring metadata for standard objects we don't need
+##
+
+# Account
 **/objects/Account/fields/AccountNumber.field-meta.xml
 **/objects/Account/fields/AccountSource.field-meta.xml
 **/objects/Account/fields/OwnerId.field-meta.xml
@@ -60,3 +61,37 @@ README
 **/objects/Account/listViews/NewLastWeek.listView-meta.xml
 **/objects/Account/webLinks/**
 
+# Contact
+**/objects/Contact/fields/AssistantName.field-meta.xml
+**/objects/Contact/fields/AssistantPhone.field-meta.xml
+**/objects/Contact/fields/Birthdate.field-meta.xml
+**/objects/Contact/fields/CleanStatus.field-meta.xml
+**/objects/Contact/fields/ContactSource.field-meta.xml
+**/objects/Contact/fields/Department.field-meta.xml
+**/objects/Contact/fields/Description.field-meta.xml
+**/objects/Contact/fields/DoNotCall.field-meta.xml
+**/objects/Contact/fields/Email.field-meta.xml
+**/objects/Contact/fields/Fax.field-meta.xml
+**/objects/Contact/fields/GenderIdentity.field-meta.xml
+**/objects/Contact/fields/HasOptedOutOfEmail.field-meta.xml
+**/objects/Contact/fields/HasOptedOutOfFax.field-meta.xml
+**/objects/Contact/fields/HomePhone.field-meta.xml
+**/objects/Contact/fields/IndividualId.field-meta.xml
+**/objects/Contact/fields/Jigsaw.field-meta.xml
+**/objects/Contact/fields/Languages__c.field-meta.xml
+**/objects/Contact/fields/LastCURequestDate.field-meta.xml
+**/objects/Contact/fields/LastCUUpdateDate.field-meta.xml
+**/objects/Contact/fields/LeadSource.field-meta.xml
+**/objects/Contact/fields/Level__c.field-meta.xml
+**/objects/Contact/fields/MailingAddress.field-meta.xml
+**/objects/Contact/fields/MobilePhone.field-meta.xml
+**/objects/Contact/fields/OtherAddress.field-meta.xml
+**/objects/Contact/fields/OtherPhone.field-meta.xml
+**/objects/Contact/fields/Phone.field-meta.xml
+**/objects/Contact/fields/Pronouns.field-meta.xml
+**/objects/Contact/fields/ReportsToId.field-meta.xml
+**/objects/Contact/fields/Title.field-meta.xml
+**/objects/Contact/listViews/BirthdaysThisMonth.listView-meta.xml
+**/objects/Contact/listViews/MyContacts.listView-meta.xml
+**/objects/Contact/listViews/NewLastWeek.listView-meta.xml
+**/objects/Contact/listViews/NewThisWeek.listView-meta.xml
