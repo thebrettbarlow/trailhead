@@ -59,7 +59,7 @@
 **/objects/Account/listViews/AllAccounts.listView-meta.xml
 **/objects/Account/listViews/NewThisWeek.listView-meta.xml
 **/objects/Account/listViews/NewLastWeek.listView-meta.xml
-**/objects/Account/webLinks/**
+**/objects/Account/webLinks/Billing.webLink-meta.xml
 
 # Contact
 **/objects/Contact/fields/AssistantName.field-meta.xml

@@ -67,6 +67,8 @@
         <name>FlexiPage</name>
     </types>
     <types>
+        <members>Account-Account Layout</members>
+        <members>Contact-Contact Layout</members>
         <members>Energy_Audit__c-Energy Audit Layout</members>
         <members>House__c-House Layout</members>
         <name>Layout</name>
@@ -91,6 +93,13 @@
         <members>AccountType</members>
         <members>OpportunityStage</members>
         <name>StandardValueSet</name>
+    </types>
+    <types>
+        <members>Account.Google_This_Account</members>
+        <members>Account.Map_Location</members>
+        <members>Contact.Google_Info</members>
+        <members>Energy_Audit__c.Audit_Guidelines</members>
+        <name>WebLink</name>
     </types>
     <version>62.0</version>
 </Package>
