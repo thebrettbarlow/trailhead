@@ -4,6 +4,14 @@ SELECT
   (
     SELECT
       Id,
+      FirstName,
+      LastName
+    FROM
+      Contacts
+  ),
+  (
+    SELECT
+      Id,
       Name,
       Account__c,
       Annual_Energy_Usage_kWh__c,

@@ -4,6 +4,10 @@
     "files": ["Account.json"]
   },
   {
+    "sobject": "Contact",
+    "files": ["Contact.json"]
+  },
+  {
     "sobject": "Energy_Audit__c",
     "files": ["Energy_Audit__c.json"]
   }
