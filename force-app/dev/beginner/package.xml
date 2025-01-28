@@ -25,6 +25,9 @@
         <members>Account.CustomerPriority__c</members>
         <members>Account.Industry</members>
         <members>Account.Type</members>
+        <members>Contact.AccountId</members>
+        <members>Contact.Name</members>
+        <members>Contact.OwnerId</members>
         <members>Energy_Audit__c.Account__c</members>
         <members>Energy_Audit__c.Annual_Energy_Usage_kWh__c</members>
         <members>Energy_Audit__c.Audit_Notes__c</members>
@@ -70,6 +73,7 @@
         <members>Account-Account Layout</members>
         <members>Contact-Contact Layout</members>
         <members>Energy_Audit__c-Energy Audit Layout</members>
+        <members>Global-Global Layout</members>
         <members>House__c-House Layout</members>
         <name>Layout</name>
     </types>
@@ -79,6 +83,7 @@
     </types>
     <types>
         <members>Account.Channel_Customers</members>
+        <members>Contact.AllContacts</members>
         <members>Energy_Audit__c.All</members>
         <members>House__c.All</members>
         <members>Opportunity.AllOpportunities</members>
@@ -88,6 +93,10 @@
     <types>
         <members>Energy_Consultations_User</members>
         <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>New_Campaign</members>
+        <name>QuickAction</name>
     </types>
     <types>
         <members>AccountType</members>
