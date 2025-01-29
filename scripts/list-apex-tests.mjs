@@ -71,7 +71,7 @@ const formatOutput = (testClasses, outputFormat) => {
   if (outputFormat === 'comma-separated') {
     return testClasses.join(',');
   } else if (outputFormat === 'script-flags') {
-    return testClasses.map((testClass) => `--test ${testClass}`).join(' ');
+    return testClasses.map((testClass) => `--tests=${testClass}`).join(' ');
   }
   throw new Error(`Unsupported output format: ${outputFormat}`);
 };
