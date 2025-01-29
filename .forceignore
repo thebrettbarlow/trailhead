@@ -18,7 +18,6 @@
 
 ##
 # Ignoring metadata for standard objects we don't need
-##
 
 # Account
 **/objects/Account/fields/AccountNumber.field-meta.xml
@@ -95,3 +94,7 @@
 **/objects/Contact/listViews/MyContacts.listView-meta.xml
 **/objects/Contact/listViews/NewLastWeek.listView-meta.xml
 **/objects/Contact/listViews/NewThisWeek.listView-meta.xml
+
+package.xml
+README
+
