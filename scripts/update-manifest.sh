@@ -22,21 +22,29 @@ validate_params() {
     usage
   fi
 
-  if [[ ! -d "${root_dir}/force-app/${module_dir}" ]]; then
-    echo "Error: Module directory '${root_dir}/force-app/${module_dir}' does not exist."
+  if [[ ! -d "${root_dir}/${module_dir}" && ! -d "${root_dir}/force-app/${module_dir}" ]]; then
+    echo "Error: Module directory '${root_dir}/force-app/${module_dir}' or '${root_dir}/${module_dir}' does not exist."
     exit 1
   fi
 }
 
 update_manifest() {
   local module_dir="$1"
+  local module_path
+
+  if [[ -d "${root_dir}/${module_dir}" ]]; then
+    module_path="${root_dir}/${module_dir}"
+  else
+    module_path="${root_dir}/force-app/${module_dir}"
+  fi
 
   sf project generate manifest \
-    --source-dir="${root_dir}/force-app/${module_dir}" \
-    --output-dir="${root_dir}/force-app/${module_dir}" \
+    --source-dir="${module_path}" \
+    --output-dir="${module_path}" \
     --type=package
 
-  npm run format
+  # Remove trailing slashes from <members> entries
+  sed -i '' 's#\(<members>[^<]*\)/\(</members>\)#\1\2#g' "${module_path}/package.xml"
 }
 
 # Main script execution

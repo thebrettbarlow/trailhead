@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Placeholders Configuration",
+  "description": "Configuration for placeholders and their values",
+  "type": "array",
+  "definitions": {
+    "environmentValue": {
+      "anyOf": [
+        {
+          "type": ["string", "number", "boolean"],
+          "description": "Environment-specific value"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "cli": {
+              "enum": ["gh", "sf"],
+              "description": "CLI to use to retrieve the value"
+            },
+            "command": {
+              "type": "string",
+              "description": "Command to use to retrieve the value"
+            },
+            "key": {
+              "type": "string",
+              "description": "Key to use to retrieve the value from the command output"
+            }
+          },
+          "required": ["cli", "command", "key"],
+          "additionalProperties": false
+        },
+        {
+          "type": "string",
+          "enum": ["remove line"],
+          "description": "Actions to take when the placeholder is found"
+        }
+      ]
+    }
+  },
+  "items": {
+    "type": "object",
+    "properties": {
+      "placeholder": {
+        "type": "string",
+        "description": "Placeholder name"
+      },
+      "default": {
+        "$ref": "#/definitions/environmentValue",
+        "description": "Default value for the placeholder"
+      },
+      "env": {
+        "type": "object",
+        "description": "Environment-specific values",
+        "properties": {
+          "prod": {
+            "$ref": "#/definitions/environmentValue",
+            "description": "Production-specific value"
+          },
+          "scratch": {
+            "$ref": "#/definitions/environmentValue",
+            "description": "Scratch Org-specific value"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "required": ["placeholder", "default"],
+    "additionalProperties": false
+  }
+}

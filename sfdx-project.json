@@ -5,6 +5,7 @@
       "default": true
     },
     { "path": "3p" },
+    { "path": "common" },
     { "path": "unpackaged" }
   ],
   "name": "salesforce",
