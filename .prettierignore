@@ -1,5 +1,14 @@
+3p/
 node_modules/
-.forceignore
-**/contentassets/**
 .husky/_/**
 .idea/
+.forceignore
+
+# We don't want to format unpackaged Static Resources
+unpackaged/staticresources/**
+
+# There is no parser for the following file types:
+**/contentassets/**
+*.email
+*.png
+*.pdf

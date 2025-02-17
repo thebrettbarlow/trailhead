@@ -1,19 +1,11 @@
 #!/usr/bin/env bash
 
 ##
-# Creates a scratch org
-#
-# This is useful if you'd like to experiment with metadata from a Trailhead
-# module in a scratch org.
-#
-# The Trailhead UI does not currently support connecting to scratch orgs (as of
-# January 2025). This is because the "Connect Org" button opens
-# `login.salesforce.com` and we need to use either `test.salesforce.com` or the
-# scratch org's instance url (My Domain) to login.
+# Creates a scratch org in one step.
 #
 # Usage:
 #   create-scratch-org.sh <org-alias>
-##
+#
 
 set -e
 
@@ -41,6 +33,19 @@ create_scratch_org() {
     --set-default
 }
 
+get_scratch_org_username() {
+  local org_alias="$1"
+  sf org display --target-org="$org_alias" --json | jq --raw-output '.result.username'
+}
+
+get_entity_id() {
+  local org_alias="$1"
+  local entity_name="$2"
+  local developer_name="${entity_name%__c}" # Remove the __c suffix
+  local query="SELECT Id FROM CustomObject WHERE DeveloperName = '${developer_name}'"
+  sf data query --target-org="$org_alias" --query="${query}" --use-tooling-api --json | jq --raw-output '.result.records[0].Id'
+}
+
 create_community() {
   local org_alias="$1"
   local community_name="$2"
@@ -54,20 +59,54 @@ create_community() {
 deploy_manifest() {
   local org_alias="$1"
   local module_dir="$2"
-  echo "Deploying manifest..."
-  "${deploy_manifest_script}" "$org_alias" "$module_dir"
+  echo "Deploying ${module_dir} manifest..."
+  "${deploy_manifest_script}" scratch "$org_alias" "$module_dir"
 }
 
-import_sample_data() {
+add_to_group() {
+  local org_alias="$1"
+  local username="$2"
+  local group_name="$3"
+
+  echo "Adding user ${username} to group ${group_name}..."
+  "${add_to_group_script}" "$org_alias" "$username" "$group_name"
+}
+
+assign_guest_user_permission_set() {
+  local org_alias="$1"
+  local community_name="$2"
+  local permission_set_name="$3"
+
+  echo "Assigning guest user permission set ${permission_set_name} to Community ${community_name}..."
+  "${assign_guest_user_permission_set_script}" "$org_alias" "$community_name" "$permission_set_name"
+}
+
+assign_permission_set() {
+  local org_alias="$1"
+  local username="$2"
+  local permission_set_name="$3"
+
+  echo "Assigning permission set ${permission_set_name} to user ${username}..."
+  "${assign_permission_set_script}" "$org_alias" "$username" "$permission_set_name"
+}
+
+import_data() {
   local org_alias="$1"
   local module_dir="$2"
-  echo "Importing sample data..."
-  "${import_data_script}" "$org_alias" "data/${module_dir}"
+  echo "Importing ${module_dir} sample data..."
+  "${import_data_script}" "$org_alias" "$module_dir"
 }
 
 install_packages() {
   local org_alias="$1"
-  echo "Installing packages..."
+  local module_dir="$2"
+  echo "Installing ${module_dir} packages..."
+  "${install_packages_script}" "$org_alias" "force-app/${module_dir}"
+}
+
+install_3p_packages() {
+  local org_alias="$1"
+  echo "Installing 3p packages..."
   "${install_packages_script}" "$org_alias" "3p"
 }
 
@@ -76,8 +115,7 @@ run_tests() {
   echo "Running all tests..."
   sf apex test run \
     --target-org="$org_alias" \
-    --wait=10 \
-    --code-coverage
+    --wait=10
 }
 
 open_scratch_org() {
@@ -88,17 +126,32 @@ open_scratch_org() {
     --path=lightning
 }
 
+open_url() {
+  local org_alias="$1"
+  local url="$2"
+  echo "Opening $url..."
+  sf org open \
+    --target-org="$org_alias" \
+    --path="$url"
+}
+
 # Main script execution
 validate_params "$1"
 
 org_alias="$1"
 root_dir=$(git rev-parse --show-toplevel)
 
-create_community_script="${root_dir}/scripts/create_and_wait_for_community.sh"
-deploy_manifest_script="${root_dir}/scripts/deploy_manifest.sh"
-import_data_script="${root_dir}/scripts/import_data.sh"
-install_packages_script="${root_dir}/scripts/install_packages.sh"
+add_to_group_script="${root_dir}/scripts/add-to-group.sh"
+assign_guest_user_permission_set_script="${root_dir}/scripts/assign-guest-user-permission-set.sh"
+assign_permission_set_script="${root_dir}/scripts/assign-permission-set.sh"
+create_community_script="${root_dir}/scripts/create-and-wait-for-community.sh"
+deploy_manifest_script="${root_dir}/scripts/deploy-manifest.sh"
+import_data_script="${root_dir}/scripts/import-data.sh"
+install_packages_script="${root_dir}/scripts/install-packages.sh"
 
+check_executable "$add_to_group_script"
+check_executable "$assign_guest_user_permission_set_script"
+check_executable "$assign_permission_set_script"
 check_executable "$create_community_script"
 check_executable "$deploy_manifest_script"
 check_executable "$import_data_script"
@@ -106,6 +159,23 @@ check_executable "$install_packages_script"
 
 echo "Creating scratch org..."
 create_scratch_org "$org_alias"
+install_packages "$org_alias"
+
+# Placeholder values for community parameters
+community_name="CommunityName"
+url_path_prefix="communityname"
+template_name="Build Your Own (LWR)"
+authentication_type="AUTHENTICATED_WITH_PUBLIC_ACCESS_ENABLED"
+create_community "$org_alias" "$community_name" "$url_path_prefix" "$template_name" "$authentication_type"
+
+# TODO: replace with real modules
+deploy_manifest "$org_alias" "example1"
+deploy_manifest "$org_alias" "example2"
+
+import_sample_data "$org_alias" "example1"
+import_sample_data "$org_alias" "example2"
+
+run_tests "$org_alias"
 open_scratch_org "$org_alias"
 
 echo "Done"
