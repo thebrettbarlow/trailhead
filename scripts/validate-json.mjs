@@ -15,7 +15,7 @@
 import fs from 'fs';
 import Ajv from 'ajv';
 
-const ajv = new Ajv();
+const ajv = new Ajv({ strict: false, allowUnionTypes: true });
 const [schemaFileArg, dataFileArg] = process.argv.slice(2);
 
 if (!schemaFileArg || !dataFileArg) {
