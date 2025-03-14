@@ -4,6 +4,224 @@ This is a collection of best practices for writing Apex code.
 
 ---
 
+## Mock Classes
+
+The `Mock` class can be `extended` to provide mock implementations for any
+interface. This allows for easy unit testing because we can mock the behavior of
+any interface.
+
+All mock classes should be named with `Mock` after the interface name. For
+example: `HelloWorldMock`, `ExampleMock`.
+
+Here is a full example:
+
+```apex
+/**
+ * {@link Mock} implementation of {@link HelloWorld}.
+ */
+@IsTest
+public class HelloWorldMock extends Mock implements HelloWorld {
+  public final Method method = new Method();
+
+  public String sayHello(String message) {
+    return (String) mockedCall(
+      method.getUrlPrefix(),
+      new Map<String, Object>{ 'message' => message }
+    );
+  }
+
+  public class Method {
+    public String sayHello() {
+      return new ExecutionInfo().getFullName();
+    }
+  }
+}
+```
+
+## Repository Classes
+
+A repository class consists of the following:
+
+- Interface (`EntityRepo`)
+- Implementation (`EntityRepoImpl`)
+- Implementation Test (`EntityRepoImplTest`)
+- Mock (`EntityRepoMock`)
+
+We will cover each type of class below:
+
+### Interface
+
+#### Class naming
+
+All repository classes should be named in the format `EntityRepo`, with `Entity`
+being the name of the entity. For example: `AccountRepo`, `CustomObjectRepo`.
+
+#### Top-level comment
+
+Each repository class should have a comment at the top of the file indicating
+that it handles data access for the given entity. For example:
+
+```apex
+/**
+ * Handles data access for {@link Entity}.
+ */
+```
+
+#### Method-level comments
+
+Only include a description of the method. Do not include `@param` or `@return`
+comments. For example:
+
+```apex
+/**
+ * Returns the entity with the given id.
+ */
+Entity getEntityById(Id entityId);
+```
+
+#### Methods
+
+When creating a new repository interface, start it with the following methods:
+
+- `getEntityById(Id entityId)`: Returns the entity with the given id.
+- `getEntitiesByIds(Set<Id> entityIds)`: Returns the entities with the given
+  ids.
+- `getEntityByName(String entityName)`: Returns the entity with the given name.
+- `getEntitiesByName(String entityName)`: Returns the entities with the given
+  name.
+- `getEntitiesByNames(Set<String> entityNames)`: Returns the entities with the
+  given names.
+- `insertEntities(List<Entity> entities)`: Inserts the given entities.
+- `updateEntities(List<Entity> entities)`: Updates the given entities.
+- `upsertEntities(List<Entity> entities)`: Upserts the given entities.
+- `deleteEntities(List<Entity> entities)`: Deletes the given entities.
+- `undeleteEntities(List<Entity> entities)`: Undeletes the given entities.
+
+Here is a full example:
+
+```apex
+/**
+ * Handles data access for {@link Entity}.
+ */
+public interface EntityRepo {
+  /**
+   * Returns the entity with the given id.
+   */
+  Entity getEntityById(Id entityId);
+
+  /**
+   * Returns the entities with the given ids.
+   */
+  List<Entity> getEntitiesByIds(Set<Id> entityIds);
+
+  /**
+   * Returns the entity with the given name.
+   */
+  Entity getEntityByName(String entityName);
+
+  /**
+   * Returns the entities with the given name.
+   */
+  List<Entity> getEntitiesByName(String entityName);
+
+  /**
+   * Returns the entities with the given names.
+   */
+  List<Entity> getEntitiesByNames(Set<String> entityNames);
+
+  /**
+   * Inserts the given entities.
+   */
+  void insertEntities(List<Entity> entities);
+
+  /**
+   * Updates the given entities.
+   */
+  void updateEntities(List<Entity> entities);
+
+  /**
+   * Upserts the given entities.
+   */
+  void upsertEntities(List<Entity> entities);
+
+  /**
+   * Deletes the given entities.
+   */
+  void deleteEntities(List<Entity> entities);
+
+  /**
+   * Undeletes the given entities.
+   */
+  void undeleteEntities(List<Entity> entities);
+}
+```
+
+### Implementation
+
+#### Class naming
+
+All repository implementations should be named in the format `EntityRepoImpl`,
+with `Entity` being the name of the entity. For example: `AccountRepoImpl`,
+`CustomObjectRepoImpl`.
+
+#### Top-level comment
+
+Each repository implementation should have a comment at the top of the file
+indicating that it is the implementation of the interface for the given entity.
+For example:
+
+```apex
+/**
+ * Implementation of {@link EntityRepo}.
+ */
+```
+
+#### Access modifiers
+
+The top-level class should be `public` and use the `inherited sharing` modifier.
+For example:
+
+```apex
+public inherited sharing class EntityRepoImpl implements EntityRepo {
+}
+```
+
+### Implementation Test Methods
+
+Repository implementations will have either of the following types of tests:
+
+- Asserts that the query ran
+- Asserts that the DML operation was performed
+
+We do not care about asserting that specific behavior happened. We only care
+that the code ran. Do not create sample records for the test methods to use.
+
+Here is an example of each type of test:
+
+```apex
+@IsTest
+private static void getEntityById_runsQuery() {
+    Id entityId = SObjectIds.generateFakeId(Entity.SObjectType);
+
+    entityRepo.getEntityById(entityId);
+
+    Assert.areEqual(1, Limits.getQueries());
+}
+
+@IsTest
+private static void insertEntities_performsDml() {
+    List<Entity> entities = new List<Entity>();
+
+    try {
+      entityRepo.insertEntities(entities);
+    } catch (Exception e) {
+      // Preventing the test from failing due to a DML exception
+    } finally {
+      Assert.isTrue(Limits.getDmlStatements() > 0);
+    }
+}
+```
+
 ## Test Classes
 
 ### Top-level comment
