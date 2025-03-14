@@ -7,7 +7,9 @@
     "prettier"
   ],
   "ignorePatterns": [
+    "3p/",
     "node_modules/",
+    "unpackaged/staticresources/",
     "*.md",
     "LICENSE",
     "package.json",
