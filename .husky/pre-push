@@ -1,2 +1,13 @@
 npm run lint
+
+# Making sure these are up to date with added/removed files
+npm run sf:update:manifest
+npm run sf:update:test-class-lists
+
+# Check for any differences in necessary config files
+if ! git diff --exit-code "**/package.xml" "**/test-classes.json"; then
+  echo "Error: necessary config files needed to be updated. Please commit the updated files before pushing."
+  exit 1
+fi
+
 npm run test
