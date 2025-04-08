@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<ruleset
+  name="ApexUnitTestClassShouldHaveAsserts"
+  xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd"
+>
+
+    <description
+  >Customizations of the ApexUnitTestClassShouldHaveAsserts rule.</description>
+
+    <rule
+    ref="category/apex/bestpractices.xml/ApexUnitTestClassShouldHaveAsserts"
+  >
+    <properties>
+        <!--Allowing asserts to be made on classes such as AssertThrows and Mock-->
+        <!--The implementation of ApexUnitTestClassShouldHaveAsserts does a case-insensitive-->
+        <!--match, so we can just list out the method names after a `.*\.`.-->
+        <!--The .*\. is used to make sure these methods are being called on an object.-->
+        <!--Examples:-->
+        <!--throwing.assertHasThrown()-->
+        <!--theMock.verify('theMethod')-->
+        <property
+        name="additionalAssertMethodPattern"
+        value=".*\.(assertHasThrown|assertHasNotThrown|verify|never|getCalls|runTriggerAndAssert|containsExactly|getDefaultValue_isNotNull|getValues_hasAllPicklistEntryValues|getValues_hasAllRecordTypeInfos|getValues_hasAllSObjectValues|isValid_returnsTrue|getLabel_returnsExpectedLabel)"
+      />
+    </properties>
+</rule>
+</ruleset>
