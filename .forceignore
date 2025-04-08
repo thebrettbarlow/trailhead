@@ -18,7 +18,6 @@
 
 ##
 # Ignoring metadata for standard objects we don't need
-##
 
 # Account
 **/objects/Account/fields/AccountNumber.field-meta.xml
@@ -95,3 +94,20 @@
 **/objects/Contact/listViews/MyContacts.listView-meta.xml
 **/objects/Contact/listViews/NewLastWeek.listView-meta.xml
 **/objects/Contact/listViews/NewThisWeek.listView-meta.xml
+
+# Preventing "deploy on save" from trying to deploy these
+README.md
+
+# Fields included in the Scratch Org build but not in Production
+**/Account/fields/IsCustomerPortal.field-meta.xml
+**/Contact/fields/CanAllowPortalSelfReg.field-meta.xml
+**/Event/fields/IsVisibleInSelfService.field-meta.xml
+**/Task/fields/IsVisibleInSelfService.field-meta.xml
+
+# LWR Experience Cloud files that are included in scratch org but not production
+**/tooManyRequests
+**/Too_Many_Requests
+
+# Allows our replace-placeholders.sh script to make replacements and revert them
+**.bak
+

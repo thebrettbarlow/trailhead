@@ -19,7 +19,7 @@
       "options": { "parser": "lwc" }
     },
     {
-      "files": "*.{cmp,page,component}",
+      "files": "*.{cmp,page,component,design,evt}",
       "options": { "parser": "html" }
     },
     {
