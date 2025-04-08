@@ -9,6 +9,11 @@
 
 set -e
 
+usage() {
+  echo "Usage: $0 <target-org> <module-dir>"
+  exit 1
+}
+
 validate_params() {
   if [[ -z "$1" ]]; then
     echo "First parameter target-org is required"
@@ -21,35 +26,41 @@ validate_params() {
   fi
 }
 
-check_soql_file() {
-  local root_dir="$1"
-  local module_dir="$2"
-  local soql_file="${root_dir}/data/${module_dir}/query.soql"
+find_soql_file() {
+  local module_dir="$1"
+  local soql_file
 
-  if [[ ! -f "$soql_file" ]]; then
-    echo "Error: SOQL file not found at $soql_file."
+  soql_file=$(find "${root_dir}/data/${module_dir}" -name "*.soql" -print -quit)
+  if [[ -z "$soql_file" ]]; then
+    echo "Error: SOQL file not found in ${root_dir}/data/${module_dir}."
     exit 1
   fi
+
+  echo "$soql_file"
 }
 
 export_data() {
   local target_org="$1"
   local module_dir="$2"
-  local root_dir
-
-  root_dir=$(git rev-parse --show-toplevel)
-
-  check_soql_file "$root_dir" "$module_dir"
+  local soql_file="$3"
 
   sf data export tree \
     --target-org="${target_org}" \
     --plan \
-    --query="${root_dir}/data/${module_dir}/query.soql" \
+    --query="${soql_file}" \
     --output-dir="${root_dir}/data/${module_dir}"
-
-  npm run format
 }
 
 # Main script execution
+if [[ "$#" -ne 2 ]]; then
+  usage
+fi
+
+target_org="$1"
+module_dir="$2"
+
+root_dir=$(git rev-parse --show-toplevel)
 validate_params "$1" "$2"
-export_data "$1" "$2"
+
+soql_file=$(find_soql_file "$module_dir")
+export_data "$target_org" "$module_dir" "$soql_file"

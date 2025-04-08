@@ -1,2 +1,27 @@
-npm run lint
+# This will update the package.xml files in each module, which is used by the
+# script that updates the list of test classes in each module.
+npm run sf:update:all
+
+if ! git diff --exit-code "**/package.xml"; then
+  echo "Committing updated package.xml files..."
+  git add "**/package.xml"
+  git commit --amend --no-edit
+fi
+
+if ! git diff --exit-code "**/test-classes.json"; then
+  echo "Committing updated test-classes.json files..."
+  git add "**/test-classes.json"
+  git commit --amend --no-edit
+fi
+
+# Code Analyzer runs as part of our linting step. It will write the results to
+# the `code-analyzer` directory and we'd like to commit the updated results.
+npm run lint:all
+
+if ! git diff --exit-code "code-analyzer"; then
+  echo "Committing updated code analyzer results..."
+  git add "code-analyzer"
+  git commit --amend --no-edit
+fi
+
 npm run test
