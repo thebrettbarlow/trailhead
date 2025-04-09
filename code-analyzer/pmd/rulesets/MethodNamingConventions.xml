@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<ruleset
+  name="MethodNamingConventions"
+  xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd"
+>
+
+    <description
+  >Customizations of the MethodNamingConventions rule.</description>
+
+    <rule ref="category/apex/codestyle.xml/MethodNamingConventions">
+    <properties>
+        <!--Allowing 0, 1 or 2 underscores-->
+        <!--Examples:-->
+        <!--methodName-->
+        <!--methodName_expectedOutcome-->
+        <!--methodName_testScenario_expectedOutcome-->
+        <property
+        name="testPattern"
+        value="^[a-z][a-zA-Z0-9]*(_[a-zA-Z0-9]+){0,2}$"
+      />
+    </properties>
+</rule>
+</ruleset>

@@ -1,0 +1,9 @@
+3p/
+assets/
+code-analyzer/
+node_modules/
+unpackaged/
+
+# We want our own custom styles for public facing websites
+force-app/websites
+common/products/sfdoc

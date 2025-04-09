@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<ruleset
+  name="PropertyNamingConventions"
+  xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd"
+>
+
+    <description
+  >Customizations of the PropertyNamingConventions rule.</description>
+
+    <rule ref="category/apex/codestyle.xml/PropertyNamingConventions">
+        <properties>
+            <!--Allowing constant variable naming for properties-->
+            <!--Examples:-->
+            <!--CONSTANT_VARIABLE-->
+            <!--otherVariable-->
+            <property name="staticPattern" value="[a-zA-Z][a-zA-Z0-9_]*" />
+            <property name="instancePattern" value="[a-zA-Z][a-zA-Z0-9_]*" />
+        </properties>
+    </rule>
+</ruleset>

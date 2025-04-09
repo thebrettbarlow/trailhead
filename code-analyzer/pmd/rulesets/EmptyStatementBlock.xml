@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<ruleset
+  name="PropertyNamingConventions"
+  xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd"
+>
+
+    <description
+  >Customizations of the PropertyNamingConventions rule.</description>
+
+    <rule ref="category/apex/errorprone.xml/EmptyStatementBlock">
+        <properties>
+            <!--We use this with the Builder pattern a lot.-->
+            <property name="reportEmptyPrivateNoArgConstructor" value="false" />
+            <!--We have base classes with default implementations that do nothing.-->
+            <!--For example, `ActionRequest.validate()` is a no-op by default.-->
+            <property name="reportEmptyVirtualMethod" value="false" />
+        </properties>
+    </rule>
+</ruleset>
