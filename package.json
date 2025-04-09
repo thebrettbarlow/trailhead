@@ -11,12 +11,34 @@
     "url": "https://github.com/thebrettbarlow/trailhead/issues"
   },
   "scripts": {
+    "code-analyzer:lint": "./scripts/run-code-analyzer.sh --mode lint",
+    "code-analyzer:save": "./scripts/run-code-analyzer.sh --mode save",
+    "dev": "./scripts/start-development.sh project-name--scratch Example",
     "format": "prettier --write . && eslint --no-error-on-unmatched-pattern . --fix",
+    "format:all": "run-s format:prettier format:slds",
+    "format:prettier": "prettier --write .",
+    "format:slds": "slds-linter lint --fix",
     "lint": "prettier --check . && eslint --no-error-on-unmatched-pattern .",
+    "lint:all": "run-p code-analyzer:lint lint:prettier lint:slds",
+    "lint:prettier": "prettier --check .",
+    "lint:slds": "slds-linter lint",
     "prepare": "husky",
+    "sf:3p:deploy": "./scripts/deploy-manifest.sh scratch project-name--scratch 3p",
+    "sf:3p:install": "./scripts/install-packages.sh project-name--scratch 3p",
+    "sf:3p:retrieve": "./scripts/retrieve-manifest.sh project-name--scratch 3p",
+    "sf:3p:verify": "./scripts/verify-manifest.sh scratch project-name--scratch 3p",
     "sf:auth": "./scripts/connect-to-org.sh trailhead",
+    "sf:common:deploy": "./scripts/deploy-manifest.sh scratch project-name--scratch common",
+    "sf:common:retrieve": "./scripts/retrieve-manifest.sh project-name--scratch common",
+    "sf:common:verify": "./scripts/verify-manifest.sh scratch project-name--scratch common",
     "sf:create:scratch": "./scripts/create-scratch-org.sh trailhead--scratch",
     "sf:install:3p:packages": "./scripts/install-packages.sh trailhead 3p",
+    "sf:module:example:deploy": "./scripts/deploy-manifest.sh scratch project-name--scratch force-app/example",
+    "sf:module:example:retrieve": "./scripts/retrieve-manifest.sh project-name--scratch force-app/example",
+    "sf:module:example:verify": "./scripts/verify-manifest.sh scratch project-name--scratch force-app/example",
+    "sf:module:websites:deploy": "./scripts/deploy-manifest.sh scratch project-name--scratch websites && ./scripts/publish-websites.sh project-name--scratch",
+    "sf:module:websites:retrieve": "./scripts/retrieve-manifest.sh project-name--scratch websites && node scripts/retrieve-websites.mjs project-name--scratch",
+    "sf:module:websites:verify": "./scripts/verify-manifest.sh scratch project-name--scratch websites",
     "sf:open": "sf org open --path=lightning",
     "sf:open:setup": "sf org open --path=lightning/setup/SetupOneHome/home",
     "sf:password:create": "sf org generate password",
@@ -29,6 +51,9 @@
     "sf:trail:dev:beginner:retrieve": "./scripts/retrieve-manifest.sh trailhead dev/beginner",
     "sf:trail:dev:beginner:test:list": "./scripts/apex-test-operator.sh trailhead dev/beginner list",
     "sf:trail:dev:beginner:test:run": "./scripts/apex-test-operator.sh trailhead dev/beginner run",
+    "sf:update:all": "run-s sf:update:manifest sf:update:test-class-lists",
+    "sf:update:manifest": "node scripts/update-manifests.mjs",
+    "sf:update:test-class-lists": "node scripts/update-test-class-lists.mjs project-name--scratch",
     "test": "./scripts/run-tests.sh trailhead"
   },
   "devDependencies": {
@@ -38,6 +63,7 @@
     "@lwc/eslint-plugin-lwc": "^2.0.0",
     "@oclif/core": "^3.26.4",
     "@prettier/plugin-xml": "^3.2.2",
+    "@salesforce-ux/slds-linter": "^0.1.4",
     "@salesforce/core": "^8.8.2",
     "@salesforce/dev-config": "^4.1.0",
     "@salesforce/eslint-config-lwc": "^3.7.0",
@@ -48,8 +74,12 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^28.5.0",
+    "fs-extra": "^11.3.0",
+    "glob": "^11.0.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
+    "npm-run-all": "^4.1.5",
+    "p-limit": "^6.2.0",
     "prettier": "^3.1.1",
     "prettier-plugin-apex": "^2.0.1",
     "prettier-plugin-pkg": "^0.18.0",
@@ -63,9 +93,6 @@
     ]
   },
   "lint-staged": {
-    "*": [
-      "prettier --write"
-    ],
-    ".js": "eslint --fix"
+    "*": "prettier --write"
   }
 }
