@@ -1,16 +1,73 @@
 {
+  "plugins": ["import"],
   "extends": [
     "eslint:recommended",
+    "plugin:import/recommended",
     "@salesforce/eslint-config-lwc/recommended",
     "@salesforce/eslint-config-lwc/i18n",
     "@locker/eslint-config-locker/recommended",
     "prettier"
   ],
-  "ignorePatterns": [
-    "node_modules/",
-    "*.md",
-    "LICENSE",
-    "package.json",
-    "sfdx-project.json"
+  "ignorePatterns": ["3p/", "assets/", "node_modules/", "unpackaged/"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", ["parent", "sibling"]],
+        "pathGroups": [
+          {
+            "pattern": "lwc",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "lightning/**",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "@salesforce/**",
+            "group": "builtin",
+            "position": "after"
+          },
+          {
+            "pattern": "c/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["lwc"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/aura/**"],
+      "plugins": ["@salesforce/eslint-plugin-aura"],
+      "extends": [
+        "plugin:@salesforce/eslint-plugin-aura/recommended",
+        "plugin:@salesforce/eslint-plugin-aura/locker"
+      ],
+      "rules": {
+        "func-names": "off",
+        "no-unused-expressions": "off"
+      }
+    },
+    {
+      "files": ["*.mjs"],
+      "env": {
+        "node": true
+      },
+      "parserOptions": {
+        "sourceType": "module"
+      },
+      "rules": {
+        "@lwc/lwc/prefer-custom-event": "off"
+      }
+    }
   ]
 }
