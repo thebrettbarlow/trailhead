@@ -19,18 +19,23 @@
       "options": { "parser": "lwc" }
     },
     {
-      "files": "*.{cmp,page,component}",
+      "files": "*.{cmp,page,component,design,evt}",
       "options": { "parser": "html" }
     },
     {
-      "files": "**/force-app/**/*.xml",
+      "files": "*.xml",
       "options": {
         "tabWidth": 4,
-        "printWidth": 1000000,
         "trailingComma": "none",
         "bracketSameLine": true,
         "xmlSortAttributesByKey": true,
         "xmlWhitespaceSensitivity": "preserve"
+      }
+    },
+    {
+      "files": "**/{3p,common,force-app,post-deploy,unpackaged}/**/*.xml",
+      "options": {
+        "printWidth": 1000000
       }
     },
     {
