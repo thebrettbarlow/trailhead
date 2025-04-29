@@ -17,6 +17,8 @@
     "sf:auth": "./scripts/connect-to-org.sh trailhead",
     "sf:create:scratch": "./scripts/create-scratch-org.sh trailhead--scratch",
     "sf:install:3p:packages": "./scripts/install-packages.sh trailhead 3p",
+    "sf:module:temp:test:list": "./scripts/apex-test-operator.sh target-org project-dir list",
+    "sf:module:temp:test:run": "./scripts/apex-test-operator.sh target-org project-dir run",
     "sf:open": "sf org open --path=lightning",
     "sf:open:setup": "sf org open --path=lightning/setup/SetupOneHome/home",
     "sf:password:create": "sf org generate password",
@@ -29,6 +31,7 @@
     "sf:trail:dev:beginner:retrieve": "./scripts/retrieve-manifest.sh trailhead dev/beginner",
     "sf:trail:dev:beginner:test:list": "./scripts/apex-test-operator.sh trailhead dev/beginner list",
     "sf:trail:dev:beginner:test:run": "./scripts/apex-test-operator.sh trailhead dev/beginner run",
+    "sf:validate": "sf project deploy start --source-dir=force-app --concise --ignore-conflicts --dry-run",
     "test": "./scripts/run-tests.sh trailhead"
   },
   "devDependencies": {

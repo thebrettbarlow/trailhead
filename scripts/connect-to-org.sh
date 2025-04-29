@@ -35,7 +35,7 @@ if [[ -z "${my_domain_url_part}" ]]; then
   exit 1
 fi
 
-sf auth web login \
+sf org login web \
   --alias="${org_alias}" \
   --instance-url="https://${my_domain_url_part}.my.salesforce.com" \
   --set-default
