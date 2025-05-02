@@ -92,6 +92,13 @@ This is a collection of best practices for writing shell scripts.
    fi
    ```
 
+   ```bash
+   if [[ ! -x "$script_path" ]]; then
+     echo "Error: $script_path is not executable"
+     exit 1
+   fi
+   ```
+
 ## Example Template
 
 Here is an example template that follows these guidelines:
