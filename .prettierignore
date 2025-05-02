@@ -1,5 +1,18 @@
+3p/
+assets/
+code-analyzer/
 node_modules/
-.forceignore
-**/contentassets/**
 .husky/_/**
 .idea/
+.forceignore
+
+# We don't want to format unpackaged metadata because we don't deploy it to the
+# org so it will be overwritten each time we retrieve it
+unpackaged/**
+
+# There is no parser for the following file types:
+**/contentassets/**
+*.csv
+*.email
+*.png
+*.pdf

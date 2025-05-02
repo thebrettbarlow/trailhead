@@ -45,7 +45,11 @@ install_packages() {
   for package in ${packages}; do
     if ! is_package_installed "${package}"; then
       echo "Installing package: ${package}"
-      sf package install --package "${package}" --target-org="${target_org}" --wait 10
+      sf package install \
+        --package="${package}" \
+        --target-org="${target_org}" \
+        --wait=10 \
+        --no-prompt
     else
       echo "Package already installed: ${package}"
     fi
@@ -74,7 +78,13 @@ trap cleanup EXIT
 # Get all installed packages at start
 get_installed_packages
 
-# Main logic: Iterate over all `installed_packages.json` files in subdirectories
-find "${root_dir}/${module_dir}" -name "installed_packages.json" | while read -r json_file; do
+# Main logic: Iterate over all `installed-packages.json` files in subdirectories
+find "${root_dir}/${module_dir}" -name "installed-packages.json" | while read -r json_file; do
+  echo "Validating JSON file: ${json_file}"
+  if ! node "${root_dir}/scripts/validate-json.mjs" "${root_dir}/.schemas/installed-packages.schema.json" "${json_file}"; then
+    echo "Validation failed for ${json_file}. Exiting."
+    exit 1
+  fi
+
   install_packages "$json_file"
 done

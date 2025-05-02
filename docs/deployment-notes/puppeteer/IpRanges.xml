@@ -1,0 +1,1285 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SecuritySettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <networkAccess>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>0.255.255.255</end>
+            <start>0.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>1.255.255.255</end>
+            <start>1.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>2.255.255.255</end>
+            <start>2.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>3.255.255.255</end>
+            <start>3.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>4.255.255.255</end>
+            <start>4.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>5.255.255.255</end>
+            <start>5.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>6.255.255.255</end>
+            <start>6.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>7.255.255.255</end>
+            <start>7.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>8.255.255.255</end>
+            <start>8.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>9.255.255.255</end>
+            <start>9.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>10.255.255.255</end>
+            <start>10.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>11.255.255.255</end>
+            <start>11.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>12.255.255.255</end>
+            <start>12.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>13.255.255.255</end>
+            <start>13.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>14.255.255.255</end>
+            <start>14.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>15.255.255.255</end>
+            <start>15.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>16.255.255.255</end>
+            <start>16.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>17.255.255.255</end>
+            <start>17.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>18.255.255.255</end>
+            <start>18.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>19.255.255.255</end>
+            <start>19.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>20.255.255.255</end>
+            <start>20.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>21.255.255.255</end>
+            <start>21.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>22.255.255.255</end>
+            <start>22.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>23.255.255.255</end>
+            <start>23.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>24.255.255.255</end>
+            <start>24.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>25.255.255.255</end>
+            <start>25.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>26.255.255.255</end>
+            <start>26.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>27.255.255.255</end>
+            <start>27.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>28.255.255.255</end>
+            <start>28.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>29.255.255.255</end>
+            <start>29.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>30.255.255.255</end>
+            <start>30.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>31.255.255.255</end>
+            <start>31.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>32.255.255.255</end>
+            <start>32.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>33.255.255.255</end>
+            <start>33.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>34.255.255.255</end>
+            <start>34.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>35.255.255.255</end>
+            <start>35.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>36.255.255.255</end>
+            <start>36.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>37.255.255.255</end>
+            <start>37.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>38.255.255.255</end>
+            <start>38.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>39.255.255.255</end>
+            <start>39.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>40.255.255.255</end>
+            <start>40.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>41.255.255.255</end>
+            <start>41.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>42.255.255.255</end>
+            <start>42.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>43.255.255.255</end>
+            <start>43.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>44.255.255.255</end>
+            <start>44.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>45.255.255.255</end>
+            <start>45.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>46.255.255.255</end>
+            <start>46.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>47.255.255.255</end>
+            <start>47.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>48.255.255.255</end>
+            <start>48.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>49.255.255.255</end>
+            <start>49.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>50.255.255.255</end>
+            <start>50.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>51.255.255.255</end>
+            <start>51.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>52.255.255.255</end>
+            <start>52.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>53.255.255.255</end>
+            <start>53.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>54.255.255.255</end>
+            <start>54.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>55.255.255.255</end>
+            <start>55.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>56.255.255.255</end>
+            <start>56.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>57.255.255.255</end>
+            <start>57.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>58.255.255.255</end>
+            <start>58.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>59.255.255.255</end>
+            <start>59.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>60.255.255.255</end>
+            <start>60.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>61.255.255.255</end>
+            <start>61.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>62.255.255.255</end>
+            <start>62.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>63.255.255.255</end>
+            <start>63.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>64.255.255.255</end>
+            <start>64.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>65.255.255.255</end>
+            <start>65.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>66.255.255.255</end>
+            <start>66.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>67.255.255.255</end>
+            <start>67.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>68.255.255.255</end>
+            <start>68.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>69.255.255.255</end>
+            <start>69.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>70.255.255.255</end>
+            <start>70.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>71.255.255.255</end>
+            <start>71.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>72.255.255.255</end>
+            <start>72.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>73.255.255.255</end>
+            <start>73.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>74.255.255.255</end>
+            <start>74.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>75.255.255.255</end>
+            <start>75.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>76.255.255.255</end>
+            <start>76.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>77.255.255.255</end>
+            <start>77.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>78.255.255.255</end>
+            <start>78.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>79.255.255.255</end>
+            <start>79.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>80.255.255.255</end>
+            <start>80.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>81.255.255.255</end>
+            <start>81.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>82.255.255.255</end>
+            <start>82.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>83.255.255.255</end>
+            <start>83.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>84.255.255.255</end>
+            <start>84.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>85.255.255.255</end>
+            <start>85.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>86.255.255.255</end>
+            <start>86.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>87.255.255.255</end>
+            <start>87.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>88.255.255.255</end>
+            <start>88.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>89.255.255.255</end>
+            <start>89.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>90.255.255.255</end>
+            <start>90.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>91.255.255.255</end>
+            <start>91.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>92.255.255.255</end>
+            <start>92.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>93.255.255.255</end>
+            <start>93.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>94.255.255.255</end>
+            <start>94.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>95.255.255.255</end>
+            <start>95.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>96.255.255.255</end>
+            <start>96.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>97.255.255.255</end>
+            <start>97.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>98.255.255.255</end>
+            <start>98.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>99.255.255.255</end>
+            <start>99.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>100.255.255.255</end>
+            <start>100.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>101.255.255.255</end>
+            <start>101.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>102.255.255.255</end>
+            <start>102.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>103.255.255.255</end>
+            <start>103.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>104.255.255.255</end>
+            <start>104.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>105.255.255.255</end>
+            <start>105.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>106.255.255.255</end>
+            <start>106.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>107.255.255.255</end>
+            <start>107.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>108.255.255.255</end>
+            <start>108.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>109.255.255.255</end>
+            <start>109.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>110.255.255.255</end>
+            <start>110.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>111.255.255.255</end>
+            <start>111.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>112.255.255.255</end>
+            <start>112.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>113.255.255.255</end>
+            <start>113.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>114.255.255.255</end>
+            <start>114.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>115.255.255.255</end>
+            <start>115.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>116.255.255.255</end>
+            <start>116.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>117.255.255.255</end>
+            <start>117.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>118.255.255.255</end>
+            <start>118.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>119.255.255.255</end>
+            <start>119.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>120.255.255.255</end>
+            <start>120.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>121.255.255.255</end>
+            <start>121.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>122.255.255.255</end>
+            <start>122.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>123.255.255.255</end>
+            <start>123.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>124.255.255.255</end>
+            <start>124.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>125.255.255.255</end>
+            <start>125.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>126.255.255.255</end>
+            <start>126.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>127.255.255.255</end>
+            <start>127.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>128.255.255.255</end>
+            <start>128.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>129.255.255.255</end>
+            <start>129.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>130.255.255.255</end>
+            <start>130.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>131.255.255.255</end>
+            <start>131.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>132.255.255.255</end>
+            <start>132.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>133.255.255.255</end>
+            <start>133.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>134.255.255.255</end>
+            <start>134.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>135.255.255.255</end>
+            <start>135.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>136.255.255.255</end>
+            <start>136.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>137.255.255.255</end>
+            <start>137.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>138.255.255.255</end>
+            <start>138.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>139.255.255.255</end>
+            <start>139.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>140.255.255.255</end>
+            <start>140.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>141.255.255.255</end>
+            <start>141.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>142.255.255.255</end>
+            <start>142.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>143.255.255.255</end>
+            <start>143.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>144.255.255.255</end>
+            <start>144.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>145.255.255.255</end>
+            <start>145.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>146.255.255.255</end>
+            <start>146.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>147.255.255.255</end>
+            <start>147.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>148.255.255.255</end>
+            <start>148.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>149.255.255.255</end>
+            <start>149.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>150.255.255.255</end>
+            <start>150.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>151.255.255.255</end>
+            <start>151.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>152.255.255.255</end>
+            <start>152.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>153.255.255.255</end>
+            <start>153.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>154.255.255.255</end>
+            <start>154.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>155.255.255.255</end>
+            <start>155.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>156.255.255.255</end>
+            <start>156.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>157.255.255.255</end>
+            <start>157.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>158.255.255.255</end>
+            <start>158.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>159.255.255.255</end>
+            <start>159.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>160.255.255.255</end>
+            <start>160.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>161.255.255.255</end>
+            <start>161.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>162.255.255.255</end>
+            <start>162.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>163.255.255.255</end>
+            <start>163.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>164.255.255.255</end>
+            <start>164.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>165.255.255.255</end>
+            <start>165.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>166.255.255.255</end>
+            <start>166.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>167.255.255.255</end>
+            <start>167.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>168.255.255.255</end>
+            <start>168.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>169.255.255.255</end>
+            <start>169.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>170.255.255.255</end>
+            <start>170.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>171.255.255.255</end>
+            <start>171.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>172.255.255.255</end>
+            <start>172.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>173.255.255.255</end>
+            <start>173.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>174.255.255.255</end>
+            <start>174.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>175.255.255.255</end>
+            <start>175.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>176.255.255.255</end>
+            <start>176.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>177.255.255.255</end>
+            <start>177.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>178.255.255.255</end>
+            <start>178.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>179.255.255.255</end>
+            <start>179.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>180.255.255.255</end>
+            <start>180.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>181.255.255.255</end>
+            <start>181.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>182.255.255.255</end>
+            <start>182.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>183.255.255.255</end>
+            <start>183.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>184.255.255.255</end>
+            <start>184.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>185.255.255.255</end>
+            <start>185.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>186.255.255.255</end>
+            <start>186.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>187.255.255.255</end>
+            <start>187.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>188.255.255.255</end>
+            <start>188.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>189.255.255.255</end>
+            <start>189.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>190.255.255.255</end>
+            <start>190.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>191.255.255.255</end>
+            <start>191.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>192.255.255.255</end>
+            <start>192.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>193.255.255.255</end>
+            <start>193.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>194.255.255.255</end>
+            <start>194.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>195.255.255.255</end>
+            <start>195.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>196.255.255.255</end>
+            <start>196.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>197.255.255.255</end>
+            <start>197.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>198.255.255.255</end>
+            <start>198.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>199.255.255.255</end>
+            <start>199.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>200.255.255.255</end>
+            <start>200.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>201.255.255.255</end>
+            <start>201.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>202.255.255.255</end>
+            <start>202.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>203.255.255.255</end>
+            <start>203.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>204.255.255.255</end>
+            <start>204.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>205.255.255.255</end>
+            <start>205.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>206.255.255.255</end>
+            <start>206.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>207.255.255.255</end>
+            <start>207.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>208.255.255.255</end>
+            <start>208.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>209.255.255.255</end>
+            <start>209.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>210.255.255.255</end>
+            <start>210.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>211.255.255.255</end>
+            <start>211.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>212.255.255.255</end>
+            <start>212.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>213.255.255.255</end>
+            <start>213.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>214.255.255.255</end>
+            <start>214.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>215.255.255.255</end>
+            <start>215.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>216.255.255.255</end>
+            <start>216.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>217.255.255.255</end>
+            <start>217.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>218.255.255.255</end>
+            <start>218.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>219.255.255.255</end>
+            <start>219.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>220.255.255.255</end>
+            <start>220.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>221.255.255.255</end>
+            <start>221.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>222.255.255.255</end>
+            <start>222.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>223.255.255.255</end>
+            <start>223.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>224.255.255.255</end>
+            <start>224.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>225.255.255.255</end>
+            <start>225.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>226.255.255.255</end>
+            <start>226.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>227.255.255.255</end>
+            <start>227.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>228.255.255.255</end>
+            <start>228.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>229.255.255.255</end>
+            <start>229.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>230.255.255.255</end>
+            <start>230.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>231.255.255.255</end>
+            <start>231.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>232.255.255.255</end>
+            <start>232.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>233.255.255.255</end>
+            <start>233.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>234.255.255.255</end>
+            <start>234.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>235.255.255.255</end>
+            <start>235.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>236.255.255.255</end>
+            <start>236.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>237.255.255.255</end>
+            <start>237.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>238.255.255.255</end>
+            <start>238.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>239.255.255.255</end>
+            <start>239.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>240.255.255.255</end>
+            <start>240.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>241.255.255.255</end>
+            <start>241.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>242.255.255.255</end>
+            <start>242.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>243.255.255.255</end>
+            <start>243.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>244.255.255.255</end>
+            <start>244.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>245.255.255.255</end>
+            <start>245.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>246.255.255.255</end>
+            <start>246.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>247.255.255.255</end>
+            <start>247.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>248.255.255.255</end>
+            <start>248.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>249.255.255.255</end>
+            <start>249.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>250.255.255.255</end>
+            <start>250.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>251.255.255.255</end>
+            <start>251.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>252.255.255.255</end>
+            <start>252.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>253.255.255.255</end>
+            <start>253.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>254.255.255.255</end>
+            <start>254.0.0.0</start>
+        </ipRanges>
+        <ipRanges>
+            <description>All IP addresses to prevent browser verification during login for Scratch Orgs</description>
+            <end>255.255.255.255</end>
+            <start>255.0.0.0</start>
+        </ipRanges>
+    </networkAccess>
+</SecuritySettings>

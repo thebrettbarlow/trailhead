@@ -30,12 +30,15 @@ validate_params() {
     usage
   fi
 
-  if [[ ! -d "${root_dir}/force-app/${module_dir}" ]]; then
-    echo "Error: Module directory '${root_dir}/force-app/${module_dir}' does not exist."
+  if [[ ! -d "${root_dir}/${module_dir}" && ! -d "${root_dir}/force-app/${module_dir}" ]]; then
+    echo "Error: Module directory '${root_dir}/${module_dir}' or '${root_dir}/force-app/${module_dir}' does not exist."
     exit 1
   fi
 
-  if [[ ! -f "${root_dir}/force-app/${module_dir}/package.xml" ]]; then
+  if [[ -d "${root_dir}/${module_dir}" && ! -f "${root_dir}/${module_dir}/package.xml" ]]; then
+    echo "Error: package.xml file not found at '${root_dir}/${module_dir}/package.xml'."
+    exit 1
+  elif [[ -d "${root_dir}/force-app/${module_dir}" && ! -f "${root_dir}/force-app/${module_dir}/package.xml" ]]; then
     echo "Error: package.xml file not found at '${root_dir}/force-app/${module_dir}/package.xml'."
     exit 1
   fi
@@ -45,13 +48,28 @@ validate_params() {
 retrieve_metadata() {
   local target_org="$1"
   local module_dir="$2"
+  local manifest_dir
+  local manifest_path
+
+  if [[ -f "${root_dir}/${module_dir}/package.xml" ]]; then
+    manifest_dir="${root_dir}/${module_dir}"
+    manifest_path="${manifest_dir}/package.xml"
+  elif [[ -f "${root_dir}/force-app/${module_dir}/package.xml" ]]; then
+    manifest_dir="${root_dir}/force-app/${module_dir}"
+    manifest_path="${manifest_dir}/package.xml"
+  else
+    echo "Error: Manifest file not found at '${root_dir}/force-app/${module_dir}/package.xml' or '${root_dir}/${module_dir}/package.xml'."
+    exit 1
+  fi
 
   sf project retrieve start \
     --ignore-conflicts \
     --target-org="${target_org}" \
-    --manifest="${root_dir}/force-app/${module_dir}/package.xml"
+    --manifest="${manifest_path}"
 
-  npm run format
+  npx stylelint "${manifest_dir}/**/*.css" --fix
+  npx eslint "${manifest_dir}" --fix
+  npx prettier --write "${manifest_dir}"
 }
 
 # Main script execution
