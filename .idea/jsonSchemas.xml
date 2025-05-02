@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JsonSchemaMappingsProjectConfiguration">
     <state>
@@ -6,14 +6,35 @@
         <entry key="Installed Salesforce Packages Schema">
           <value>
             <SchemaInfo>
-              <option
-                name="name"
-                value="Installed Salesforce Packages Schema"
-              />
-              <option
-                name="relativePathToSchema"
-                value=".schemas/installed-packages.schema.json"
-              />
+              <option name="name" value="Installed Salesforce Packages Schema" />
+              <option name="relativePathToSchema" value=".schemas/installed-packages.schema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value="installed-packages.json" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="Placeholders Configuration">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="Placeholders Configuration" />
+              <option name="relativePathToSchema" value=".schemas/placeholders.schema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value="placeholders.json" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                </list>
+              </option>
             </SchemaInfo>
           </value>
         </entry>
