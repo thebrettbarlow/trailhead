@@ -1,6 +1,16 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
+    <inspection_tool class="ApexDocValidation" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PMDApex" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="WARNING_ATTRIBUTES">
+      <option name="pmdPath" value="/opt/homebrew" />
+      <option name="rulesetPath" value="$PROJECT_DIR$/pmd-ruleset.xml" />
+      <option name="enablePmdAppExchange" value="true" />
+      <option name="pmdAppExchangeRulesetPath" value="$PROJECT_DIR$/pmd-ruleset.xml" />
+      <option name="minimumRulePriority" value="MEDIUM" />
+    </inspection_tool>
+    <inspection_tool class="SqlNoDataSourceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="Stylelint" enabled="true" level="ERROR" enabled_by_default="true" />
   </profile>
 </component>

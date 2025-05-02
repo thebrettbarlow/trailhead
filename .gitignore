@@ -52,3 +52,12 @@ target/
 /.illuminatedCloud/
 **/tsconfig*.json
 **/*.tsbuildinfo
+
+# Used by puppeteer scripts
+/browser-user-data
+
+# Data migration exports
+/data/migration/export
+
+# Used by stylelint
+.stylelintcache

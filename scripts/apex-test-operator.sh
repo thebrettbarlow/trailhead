@@ -35,13 +35,18 @@ fi
 operation=$(echo "${operation}" | tr '[:upper:]' '[:lower:]')
 
 root_dir=$(git rev-parse --show-toplevel)
-package_xml_path="${root_dir}/force-app/${module_dir}/package.xml"
-list_apex_tests_script="${root_dir}/scripts/list-apex-tests.mjs"
 
-if [[ ! -f "${package_xml_path}" ]]; then
-  echo "Error: package.xml file not found at ${package_xml_path}."
+manifest_path=""
+if [[ -f "${root_dir}/${module_dir}/package.xml" ]]; then
+  manifest_path="${root_dir}/${module_dir}/package.xml"
+elif [[ -f "${root_dir}/force-app/${module_dir}/package.xml" ]]; then
+  manifest_path="${root_dir}/force-app/${module_dir}/package.xml"
+else
+  echo "Error: Manifest file not found at '${root_dir}/force-app/${module_dir}/package.xml' or '${root_dir}/${module_dir}/package.xml'."
   exit 1
 fi
+
+list_apex_tests_script="${root_dir}/scripts/list-apex-tests.mjs"
 
 if [[ ! -f "${list_apex_tests_script}" ]]; then
   echo "Error: list-apex-tests.mjs file not found at ${list_apex_tests_script}."
@@ -49,8 +54,8 @@ if [[ ! -f "${list_apex_tests_script}" ]]; then
 fi
 
 if [[ "${operation}" == "list" ]]; then
-  echo "Listing test classes from ${package_xml_path}..."
-  class_names=$(node "${list_apex_tests_script}" "${package_xml_path}" "${target_org}" "comma-separated")
+  echo "Listing test classes from ${manifest_path}..."
+  class_names=$(node "${list_apex_tests_script}" "${manifest_path}" "${target_org}" "comma-separated")
 
   if [[ -z "${class_names}" ]]; then
     echo "No test classes found."
@@ -60,13 +65,24 @@ if [[ "${operation}" == "list" ]]; then
   echo "Test classes: ${class_names}"
 
 elif [[ "${operation}" == "run" ]]; then
-  echo "Retrieving test class names from ${package_xml_path}..."
-  class_names_output=$(node "${list_apex_tests_script}" "${package_xml_path}" "${target_org}" "script-flags")
+  echo "Retrieving test class names for ${module_dir}..."
+
+  class_names_output=
+  if [[ -f "${root_dir}/${module_dir}/test-classes.json" ]]; then
+    class_names_output=$(jq -r '.[] | "--tests=\(.)"' "${root_dir}/${module_dir}/test-classes.json")
+  elif [[ -f "${root_dir}/force-app/${module_dir}/test-classes.json" ]]; then
+    class_names_output=$(jq -r '.[] | "--tests=\(.)"' "${root_dir}/force-app/${module_dir}/test-classes.json")
+  else
+    echo "Did not find test-classes.json. Retrieving test class names from ${manifest_path}..."
+    class_names_output=$(node "${list_apex_tests_script}" "${manifest_path}" "${target_org}" "script-flags")
+  fi
 
   if [[ -z "${class_names_output}" ]]; then
     echo "No test classes found."
     exit 0
   fi
+
+  echo "Running tests..."
 
   # `class_names_output` needs to be expanded
   # shellcheck disable=SC2086

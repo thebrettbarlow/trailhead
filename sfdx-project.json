@@ -5,10 +5,12 @@
       "default": true
     },
     { "path": "3p" },
+    { "path": "common" },
+    { "path": "post-deploy" },
     { "path": "unpackaged" }
   ],
   "name": "salesforce",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "62.0"
+  "sourceApiVersion": "63.0"
 }
