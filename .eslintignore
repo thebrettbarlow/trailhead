@@ -1,0 +1,8 @@
+3p/
+assets/
+code-analyzer/
+node_modules/
+unpackaged/
+*.md
+package.json
+sfdx-project.json
