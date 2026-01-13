@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<ruleset
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd"
+    name="TrueHands PMD Ruleset">
+    <description>
+        This ruleset contains all PMD rules for this project.
+    </description>
+
+    <rule ref="category/apex/bestpractices.xml" />
+    <rule ref="category/apex/codestyle.xml" />
+    <rule ref="category/apex/design.xml" />
+    <rule ref="category/apex/documentation.xml" />
+    <rule ref="category/apex/errorprone.xml" />
+    <rule ref="category/apex/performance.xml" />
+    <rule ref="category/apex/security.xml" />
+
+    <rule
+        ref="category/apex/bestpractices.xml/ApexUnitTestClassShouldHaveAsserts">
+        <properties>
+            <!--Allowing asserts to be made on classes such as AssertThrows and Mock-->
+            <!--The implementation of ApexUnitTestClassShouldHaveAsserts does a case-insensitive-->
+            <!--match, so we can just list out the method names after a `.*\.`.-->
+            <!--The .*\. is used to make sure these methods are being called on an object.-->
+            <!--Examples:-->
+            <!--throwing.assertHasThrown()-->
+            <!--theMock.verify('theMethod')-->
+            <property
+                name="additionalAssertMethodPattern"
+                value=".*\.(assertHasThrown|assertHasNotThrown|verify|never|getCalls|runTriggerAndAssert|containsExactly|getDefaultValue_isNotNull|getValues_hasAllPicklistEntryValues|getValues_hasAllRecordTypeInfos|getValues_hasAllSObjectValues|isValid_returnsTrue|getLabel_returnsExpectedLabel)" />
+        </properties>
+    </rule>
+
+    <rule ref="category/apex/errorprone.xml/EmptyStatementBlock">
+        <properties>
+            <!--We use this with the Builder pattern a lot.-->
+            <property name="reportEmptyPrivateNoArgConstructor" value="false" />
+            <!--We have base classes with default implementations that do nothing.-->
+            <!--For example, `ActionRequest.validate()` is a no-op by default.-->
+            <property name="reportEmptyVirtualMethod" value="false" />
+        </properties>
+    </rule>
+
+    <rule ref="category/apex/codestyle.xml/MethodNamingConventions">
+        <properties>
+            <!--Allowing 0, 1 or 2 underscores-->
+            <!--Examples:-->
+            <!--methodName-->
+            <!--methodName_expectedOutcome-->
+            <!--methodName_testScenario_expectedOutcome-->
+            <property
+                name="testPattern"
+                value="^[a-z][a-zA-Z0-9]*(_[a-zA-Z0-9]+){0,2}$" />
+        </properties>
+    </rule>
+
+    <rule ref="category/apex/codestyle.xml/PropertyNamingConventions">
+        <properties>
+            <!--Allowing constant variable naming for properties-->
+            <!--Examples:-->
+            <!--CONSTANT_VARIABLE-->
+            <!--otherVariable-->
+            <property name="staticPattern" value="[a-zA-Z][a-zA-Z0-9_]*" />
+            <property name="instancePattern" value="[a-zA-Z][a-zA-Z0-9_]*" />
+        </properties>
+    </rule>
+</ruleset>

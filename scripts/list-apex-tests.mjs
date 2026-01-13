@@ -11,11 +11,11 @@
  *
  * @param {string} packageXmlPath - Path to the package.xml file.
  * @param {string} orgAlias - Alias for the Salesforce organization.
- * @param {string} outputFormat - Format for the output: "comma-separated" or "script-flags".
+ * @param {string} outputFormat - Format for the output: "comma-separated", "json" or "script-flags".
  */
 
-import { Org } from '@salesforce/core';
 import fs from 'fs';
+import { Org } from '@salesforce/core';
 import xml2js from 'xml2js';
 
 const parsePackageXml = async (packageXmlPath) => {
@@ -70,15 +70,17 @@ const findTestClasses = (apexClasses) => {
 const formatOutput = (testClasses, outputFormat) => {
   if (outputFormat === 'comma-separated') {
     return testClasses.join(',');
+  } else if (outputFormat === 'json') {
+    return JSON.stringify(testClasses);
   } else if (outputFormat === 'script-flags') {
-    return testClasses.map((testClass) => `--test ${testClass}`).join(' ');
+    return testClasses.map((testClass) => `--tests=${testClass}`).join(' ');
   }
   throw new Error(`Unsupported output format: ${outputFormat}`);
 };
 
 const identifyTestClasses = async (packageXmlPath, orgAlias, outputFormat) => {
-  const packageJson = await parsePackageXml(packageXmlPath);
-  const apexClassNames = getApexClassNames(packageJson);
+  const packageXml = await parsePackageXml(packageXmlPath);
+  const apexClassNames = getApexClassNames(packageXml);
 
   const conn = await getSalesforceConnection(orgAlias);
   const apexClasses = await getApexClasses(conn, apexClassNames);
@@ -96,7 +98,7 @@ const identifyTestClasses = async (packageXmlPath, orgAlias, outputFormat) => {
         'Usage: node list-apex-tests.mjs <packageXmlPath> <orgAlias> <outputFormat>'
       );
       console.error(
-        'Supported output formats: "comma-separated", "script-flags"'
+        'Supported output formats: "comma-separated", "json", "script-flags"'
       );
       process.exit(1);
     }
